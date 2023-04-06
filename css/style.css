@@ -32,7 +32,7 @@ a{
     
 }
 
-button{
+.BotonesNormales{
     background-color: #0C3A5E;
     color: #ffffff;
     border-radius: 0.5rem;
@@ -57,7 +57,16 @@ button{
 .ContenedorPrincipal{
     border-radius: 1rem;
     background-color: rgba(255, 255, 255, 0.4);
-    margin: -2.5% 10% 0% 10%;
+    margin: -2.5% 2% 2% 2%;
+    padding: 3% 5% 2% 5%;
+    backdrop-filter: blur(15px);
+
+}
+
+.ContenedorPrincipalLogueo{
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: -2.5% 10% 0% 10% !important;
     padding: 3% 5% 2% 5%;
     backdrop-filter: blur(15px);
 
@@ -67,6 +76,7 @@ button{
     display: block;
     justify-content: center;
     text-align: center;
+    margin: auto;
 
 }
 
@@ -84,3 +94,88 @@ button{
     font-family: 'Roboto Slab', serif;
 
 }
+
+.FuenteNaranja{
+    color: #F6AD34;
+    font-size: 150%;
+}
+
+.FotoPerfil{
+    border-radius: 80%;
+
+}
+
+.ContenedorIdentificacionPerfil{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5% 5% 2% 5%;
+
+}
+
+.ContenedorInformacionComplementaria{
+    display: block;
+    margin: 5% 10% 10% 10%;
+
+}
+
+.ContenedorInformacionComplementariaSecundario{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8%;
+
+}
+
+.LineaDivicion{
+    background-color: #0C3A5E;
+    padding: 0.2% 30% 0.2% 30%;
+    margin: 8%;
+    border-radius: 100rem;
+}
+
+.Publicacion{
+    background-color: #cac7c7;
+    border-radius: 1rem;
+    margin-bottom: 5%;
+
+}
+
+.ImagenPublicacionTipoImagen{
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+}
+
+.ImagenPublicacionTipoIcono{
+    border-radius: 10%;
+    margin-right: 2%;
+
+}
+
+.ContenedorIconoTexto{
+    margin: 2%;
+    padding-top: 2%;
+    display: flex;
+    align-items: center;
+
+}
+
+.TextoPublicacion{
+    margin: 2%;
+    text-align: justify;
+
+}
+
+.BotonesPublicacion{
+    background-color: #0C3A5E;
+    color: #ffffff;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-style: none;
+    padding: 1% 0% 1% 0%;
+    width: 15%;
+    width: 100%;
+}
+
+
+
