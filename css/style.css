@@ -39,6 +39,7 @@ a{
     border-style: none;
     padding: 1% 0% 1% 0%;
     width: 15%;
+    font-size: 120%;
 
 }
 
@@ -158,6 +159,22 @@ a{
 .ContenedorNombrePersona{
     display: flex;
     justify-content: end;
+
+}
+
+.EntradaTexto{
+    width: 99%;
+    height: 8rem;
+    border-radius: 0.5rem;
+    border-style: none;
+    background-color: #d3d3d3;
+    padding: 1% 0% 1% 1%;
+
+}
+
+.EntradaArchivos{
+    width: 99%;
+    background-color: rgba(0, 0, 0, 0);
 
 }
 
