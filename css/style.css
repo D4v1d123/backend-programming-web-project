@@ -32,17 +32,6 @@ a{
     
 }
 
-.BotonesNormales{
-    background-color: #0C3A5E;
-    color: #ffffff;
-    border-radius: 0.5rem;
-    border-style: none;
-    padding: 1% 0% 1% 0%;
-    width: 15%;
-    font-size: 120%;
-
-}
-
 .Header{
     background-image: linear-gradient(
         rgba(12,58,94, 0.95),
@@ -68,12 +57,36 @@ a{
 
 }
 
+.HeaderSinLogo{
+    background-color: #0C3A5E;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    display: block;
+    justify-content: center;
+}
+
 .ContenedorPrincipal{
     border-radius: 1rem;
     background-color: rgba(255, 255, 255, 0.4);
     margin: -2.5% 2% 2% 2%;
     padding: 3% 5% 2% 5%;
     backdrop-filter: blur(15px);
+
+}
+
+.ContenedorPrincipalFondoBlanco{
+    border-radius: 1rem;
+    background-color: #ffffff;
+    margin: -2.5% 2% 2% 2%;
+    padding: 5% 7% 1.5% 7%;
+
+}
+
+.ContenedorSecundarioFondoGris{
+    border-radius: 1rem;
+    background-color: #ddd3d3;
+    margin: -2.5% 2% 2% 2%;
+    padding: 3% 9% 2% 9%;
 
 }
 
@@ -162,6 +175,19 @@ a{
 
 }
 
+.ContenedorAmigos{
+    display: flex;  
+    padding: 0% 0.5% 0% 0.5%;
+    margin-bottom: 3%;    
+
+}
+
+.InputHeader{
+    background-color: rgba(0, 0, 0, 0);
+    color: #ffffff;
+
+}
+
 .EntradaTexto{
     width: 99%;
     height: 8rem;
@@ -214,6 +240,14 @@ a{
 
 }
 
+.ImagenPerfilAmigo{
+    border-radius: 400rem;    
+    width: 10%;
+    height: 10%;
+    object-fit: cover;
+
+}
+
 .ContenedorIconoTexto{
     margin: 2%;
     padding-top: 2%;
@@ -239,6 +273,28 @@ a{
     width: 100%;
 }
 
+.BotonesNormales{
+    background-color: #0C3A5E;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    border-style: none;
+    padding: 1% 0% 1% 0%;
+    width: 15%;
+    font-size: 120%;
+
+}
+
+.BotonesAgregarAmigos{
+    background-color: #0C3A5E;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    border-style: none;
+    padding: 1% 0% 1% 0%;
+    width: 20%;
+    font-size: 110%;
+
+}
+
 /*Colocar un elemento sobre otro*/
 .CapaSuperior{
     z-index: 2;
@@ -247,5 +303,10 @@ a{
 
 .CapaInferior{
     z-index: 1;
+
+}
+
+.FondoAzul{
+    background-color: #0C3A5E;
 
 }
