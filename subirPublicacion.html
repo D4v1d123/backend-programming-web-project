@@ -27,23 +27,12 @@
         </div>
     </header>
     <dir class="ContenedorPrincipal">
-        <h2 class="Fuente CentrarContenido">Crear una publicación</h2>
-        <br>
-        <br>
-        <br>
-        <br>
-        <textarea type="text" placeholder="Escribe tú publicación" class="Fuente EntradaTexto"></textarea>
-        <br>
-        <br>
-        <br>
-        <input type="file" class="Fuente EntradaArchivos">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <button class="Fuente CentrarContenido BotonesNormales">Guardar</button>
+        <h2 class="Fuente CentrarContenido" style="margin-bottom: 8%;">Crear una publicación</h2>
+        <form action="php/subirArchivo.php" method="post" enctype="multipart/form-data">
+            <textarea type="text" placeholder="Escribe tú publicación" class="Fuente EntradaTexto" style="margin-bottom: 3%;"></textarea>
+            <input type="file" name="archivo" class="Fuente EntradaArchivos" style="margin-bottom: 8%;">
+            <input type="submit" class="Fuente CentrarContenido BotonesNormales" value="Guardar">
+        </form>
     </dir>
 </body>
 </html>
