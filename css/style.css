@@ -162,6 +162,7 @@ a{
 .ContenedorNombrePersona{
     display: flex;
     justify-content: end;
+    width: 50%;
 
 }
 
@@ -206,9 +207,16 @@ a{
 }
 
 .IconosBarraOpciones{
-    text-align: start;
+    display: inline-flex;
     justify-content: center;
-    padding-left: 2%;
+    margin: auto;
+
+}
+
+.OpcionTextoEncabezado{
+    display: inline-flex;
+    color: #ffffff;
+    margin-left: -3%;
 
 }
 
@@ -235,14 +243,17 @@ a{
 
 .FotoPerfil{
     border-radius: 80%;
-    margin-right: -2%;
-    margin-top: 1%;
+    margin-right: -4%;
+    margin-top: 2%;
 
 }
 
 .InputHeader{
     background-color: rgba(0, 0, 0, 0);
     color: #ffffff;
+    font-weight: bold;
+    margin: 2% 4% 2% -4%;
+    width: 100%;
 
 }
 
@@ -266,7 +277,7 @@ a{
     font-family: 'Roboto Slab', serif;
     color: #ffffff;
     font-size: 100%;
-    padding: 1.4% 4% 0% 4%;
+    padding: 4% 4% 4% 6%;
     background-color: #0C3A5E;
     border-radius: 0.7rem;
 
@@ -347,9 +358,9 @@ a{
     color: #ffffff;
     border-radius: 0.5rem;
     border-style: none;
-    padding: 1% 0% 1% 0%;
-    width: 20%;
+    padding: 8px;
     font-size: 110%;
+    white-space: nowrap;
 
 }
 
