@@ -17,7 +17,11 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-export const crearPublicacion = (comentario, nombre_archivo, nombre_persona, url_archivo, tipo_archivo, fechaPublicacion) => {
+const dbConexion = getFirestore();
+
+//, nombre_archivo, nombre_persona, url_archivo, tipo_archivo, fechaPublicacion
+
+export const crearPublicacion = (comentario) => {
     alert(comentario);
     
 }
