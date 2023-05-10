@@ -1,6 +1,7 @@
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -17,11 +18,10 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-const dbConexion = getFirestore();
+//Se crea la conexión a firestore
+const db_conexion = getFirestore();
 
-//, nombre_archivo, nombre_persona, url_archivo, tipo_archivo, fechaPublicacion
-
-export const crearPublicacion = (comentario) => {
-    alert(comentario);
-    
+export const crearPublicacion = (comentario, nombre_archivo, nombre_persona, url_archivo, tipo_archivo, fechaPublicacion) => {
+    addDoc(collection(db_conexion, 'publicacion'), {comentario, nombre_archivo, nombre_persona, url_archivo, tipo_archivo, fechaPublicacion});
+    alert("Funcionó");    
 }
