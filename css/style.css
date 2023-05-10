@@ -32,16 +32,6 @@ a{
     
 }
 
-.BotonesNormales{
-    background-color: #0C3A5E;
-    color: #ffffff;
-    border-radius: 0.5rem;
-    border-style: none;
-    padding: 1% 0% 1% 0%;
-    width: 15%;
-
-}
-
 .Header{
     background-image: linear-gradient(
         rgba(12,58,94, 0.95),
@@ -67,6 +57,14 @@ a{
 
 }
 
+.HeaderSinLogo{
+    background-color: #0C3A5E;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    display: block;
+    justify-content: center;
+}
+
 .ContenedorPrincipal{
     border-radius: 1rem;
     background-color: rgba(255, 255, 255, 0.4);
@@ -76,55 +74,61 @@ a{
 
 }
 
+.ContenedorPrincipalFondoBlanco{
+    border-radius: 1rem;
+    background-color: #ffffff;
+    margin: -2.5% 2% 2% 2%;
+    padding: 5% 7% 1.5% 7%;
+
+}
+
+.ContenedorChatFondoBlanco{
+    border-radius: 1rem;
+    background-color: #ffffff;
+    margin: -2.5% 2% 2% 2%;
+    padding: 3%;
+
+}
+
+.ContenedorPrincipalChatFondoGris{
+    border-radius: 1rem;
+    border: 0.18rem solid #0C3A5E;
+    background-color: #cac7c7;
+    margin: 3% 3% 0% 3%;
+
+}
+
+.ContenedorSecundarioChat{
+    background-color: #cac7c7;
+    margin: 1.5% 3% 1% 3%;
+
+}
+
+.ContenedorSecundarioMensaje{
+    background-color: #ffffff;
+    width: 99%;
+    margin: 0.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.5rem;
+
+}
+
+.ContenedorSecundarioFondoGris{
+    border-radius: 1rem;
+    background-color: #ddd3d3;
+    margin: -2.5% 2% 2% 2%;
+    padding: 3% 9% 2% 9%;
+
+}
+
 .ContenedorPrincipalLogueo{
     border-radius: 1rem;
     background-color: rgba(255, 255, 255, 0.4);
     margin: -2.5% 10% 0% 10% !important;
     padding: 3% 5% 2% 5%;
     backdrop-filter: blur(15px);
-
-}
-
-.CentrarContenido{
-    display: block;
-    justify-content: center;
-    text-align: center;
-    margin: auto;
-
-}
-
-.IconosBarraOpciones{
-    text-align: start;
-    justify-content: center;
-    padding-left: 2%;
-
-}
-
-.EspacioContenidoLogueo{
-    margin-bottom: 2%;
-
-}
-
-.EspacioContenidoLogueoTitulo{
-    margin-bottom: 5%;
-
-}
-
-.Fuente{
-    font-family: 'Roboto Slab', serif;
-
-}
-
-.FuenteNaranja{
-    font-family: 'Roboto Slab', serif;
-    color: #F6AD34;
-    font-size: 150%;
-}
-
-.FotoPerfil{
-    border-radius: 80%;
-    margin-right: -2%;
-    margin-top: 1%;
 
 }
 
@@ -158,6 +162,115 @@ a{
 .ContenedorNombrePersona{
     display: flex;
     justify-content: end;
+    width: 50%;
+
+}
+
+.ContenedorAmigos{
+    display: flex;  
+    padding: 0% 0.5% 0% 0.5%; 
+    margin-bottom: 2%;  
+    align-items: center;
+
+}
+
+.MensajeAmigo{
+    background-color: #0C3A5E;
+    color: #ffffff;
+    padding: 1%;
+    border-radius: 0.5rem;
+    display: inline-block;
+
+}
+
+.MensajePropio{
+    background-color: #ffffff;
+    color: #0C3A5E;
+    padding: 1%;
+    border-radius: 0.5rem;
+    display: inline-block;
+    float: right;
+
+}
+
+.CentrarContenido{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+
+}
+
+.CentrarContenidoSoloVerticalmente{
+    display: flex;
+    align-items: center;
+
+}
+
+.IconosBarraOpciones{
+    display: inline-flex;
+    justify-content: center;
+    margin: auto;
+
+}
+
+.OpcionTextoEncabezado{
+    display: inline-flex;
+    color: #ffffff;
+    margin-left: -3%;
+
+}
+
+.EspacioContenidoLogueo{
+    margin-bottom: 2%;
+
+}
+
+.EspacioContenidoLogueoTitulo{
+    margin-bottom: 5%;
+
+}
+
+.Fuente{
+    font-family: 'Roboto Slab', serif;
+
+}
+
+.FuenteNaranja{
+    font-family: 'Roboto Slab', serif;
+    color: #F6AD34;
+    font-size: 150%;
+}
+
+.FotoPerfil{
+    border-radius: 80%;
+    margin-right: -4%;
+    margin-top: 2%;
+
+}
+
+.InputHeader{
+    background-color: rgba(0, 0, 0, 0);
+    color: #ffffff;
+    font-weight: bold;
+    margin: 2% 4% 2% -4%;
+    width: 100%;
+
+}
+
+.EntradaTexto{
+    width: 99%;
+    height: 8rem;
+    border-radius: 0.5rem;
+    border-style: none;
+    background-color: #d3d3d3;
+    padding: 1% 0% 1% 1%;
+
+}
+
+.EntradaArchivos{
+    width: 99%;
+    background-color: rgba(0, 0, 0, 0);
 
 }
 
@@ -165,7 +278,7 @@ a{
     font-family: 'Roboto Slab', serif;
     color: #ffffff;
     font-size: 100%;
-    padding: 1.4% 4% 0% 4%;
+    padding: 4% 4% 4% 6%;
     background-color: #0C3A5E;
     border-radius: 0.7rem;
 
@@ -197,6 +310,14 @@ a{
 
 }
 
+.ImagenPerfilAmigo{
+    border-radius: 400rem;    
+    width: 10%;
+    height: 10%;
+    object-fit: cover;
+
+}
+
 .ContenedorIconoTexto{
     margin: 2%;
     padding-top: 2%;
@@ -222,6 +343,28 @@ a{
     width: 100%;
 }
 
+.BotonesNormales{
+    background-color: #0C3A5E;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    border-style: none;
+    padding: 1% 0% 1% 0%;
+    width: 15%;
+    font-size: 120%;
+
+}
+
+.BotonesAgregarAmigos{
+    background-color: #0C3A5E;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    border-style: none;
+    padding: 8px;
+    font-size: 110%;
+    white-space: nowrap;
+
+}
+
 /*Colocar un elemento sobre otro*/
 .CapaSuperior{
     z-index: 2;
@@ -230,5 +373,10 @@ a{
 
 .CapaInferior{
     z-index: 1;
+
+}
+
+.FondoAzul{
+    background-color: #0C3A5E;
 
 }

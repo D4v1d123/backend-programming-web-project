@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Subir publicación</title>
+</head>
+<body>
+    <header class="HeaderConOpciones CentrarContenido">
+        <div class="ContenedorPrincipal ContenedorBarraOpciones">
+            <div class="IconosBarraOpciones" style="width: 50%; padding-right: 40%;">
+                <a rel="stylesheet" href="#"> <img src="img/Busqueda icono.png" alt="Buscar amigos" width="45%" style="margin-top: 20%;"> </a>
+                <a rel="stylesheet" href="subirPublicacion.html"> <img src="img/Publicar icono.png" alt="Hacer una publicación" width="45%" style="margin-top: 20%;"> </a>
+                <h3 class="Fuente OpcionTextoEncabezado">Crear una publicación</h3>
+                <a rel="stylesheet" href="#"> <img src="img/Chat icono.png" alt="Chatear con un amigo" width="45%" style="margin-top: 20%; margin-left: 100%;"> </a>
+            </div>
+            <div class="ContenedorNombrePersona">
+                <img src="img/Foto de perfil de EJEMPLO.jpg" alt="Foto de perfil" width="17%" height="80%" class="FotoPerfil CapaSuperior">
+                <h3 class="NombrePersona CapaInferior">David Alejandro Guerrero Amador</h3>
+            </div>
+        </div>
+        <div class="Header" style="padding: 0;">
+            <img src="img/Logo.png" alt="Logo de UniSocial" width="12%">
+            <h1 class="Fuente">UniSocial</h1>
+        </div>
+    </header>
+    <dir class="ContenedorPrincipal">
+        <h2 class="Fuente CentrarContenido" style="margin-bottom: 8%;">Crear una publicación</h2>
+        <form id="formulario_publicacion" method="post" enctype="multipart/form-data">
+            <textarea type="text" id="comentario" placeholder="Escribe tú publicación" class="Fuente EntradaTexto" style="margin-bottom: 3%;"></textarea>
+            <input type="file" id="archivo" class="Fuente EntradaArchivos" style="margin-bottom: 8%;">
+            <input type="submit" class="Fuente CentrarContenido BotonesNormales" value="Guardar">
+        </form>
+    </dir>
+    <script type="module" src="./js/subirPublicacion.js"></script>
+</body>
+</html>
