@@ -1,7 +1,7 @@
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
-import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js";
+import { getFirestore, collection, addDoc, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -22,6 +22,19 @@ const app = initializeApp(firebaseConfig);
 const db_conexion = getFirestore();
 
 export const crearPublicacion = (comentario, nombre_archivo, nombre_persona, url_archivo, tipo_archivo, fechaPublicacion) => {
-    addDoc(collection(db_conexion, 'publicacion'), {comentario, nombre_archivo, nombre_persona, url_archivo, tipo_archivo, fechaPublicacion});
-    alert("Funcionó");    
-}
+    addDoc(collection(db_conexion, 'publicacion'), {comentario, nombre_archivo, nombre_persona, url_archivo, tipo_archivo, fechaPublicacion})
+    .then((doc_Resultado) => {
+        window.location.href = "../muroPersonal.html";
+
+    })
+    .catch((error) => {
+        alert("Error al crear la publicación: ", error);
+        window.location.href = "../muroPersonal.html";
+
+    });
+    
+    
+};
+
+export const listarPublicaciones = () => getDocs(query(collection(db_conexion, 'publicacion'), orderBy('fechaPublicacion', 'asc')));
+
