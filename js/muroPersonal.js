@@ -3,7 +3,6 @@ import { listarPublicaciones } from "./firebase.js";
 const listaPublicaciones = async() => {
     const publicaciones = await listarPublicaciones();
     
-    
     publicaciones.forEach(element => {
         const publicacion = element.data();
         console.log(publicacion.tipo_archivo);

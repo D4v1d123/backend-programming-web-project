@@ -11,47 +11,20 @@
     <header class="HeaderSinLogo CentrarContenido">
         <div class="ContenedorPrincipal ContenedorBarraOpciones">
             <div class="IconosBarraOpciones" style="width: 50%; padding-right: 30%;">
-                <a rel="stylesheet" href="#"> <img src="img/Busqueda icono.png" alt="Buscar amigos" width="40%" style="margin-top: 8%;"> </a>
-                <input type="text" placeholder="Nombre del amigo" class="Fuente InputHeader">
+                <a rel="stylesheet" href="./amigos.html"> <img src="img/Busqueda icono.png" alt="Buscar amigos" width="40%" style="margin-top: 8%;"> </a>
+                <input type="text" placeholder="Nombre del amigo" class="Fuente InputHeader" id="nombre_amigo">
                 <a rel="stylesheet" href="subirPublicacion.html"> <img src="img/Publicar icono.png" alt="Hacer una publicación" width="40%" style="margin-top: 8%;"> </a>
-                <a rel="stylesheet" href="#"> <img src="img/Chat icono.png" alt="Chatear con un amigo" width="40%" style="margin-top: 8%;"> </a>
+                <a rel="stylesheet" href="./amigos.html"> <img src="img/Chat icono.png" alt="Chatear con un amigo" width="40%" style="margin-top: 8%;"> </a>
             </div>
-            <div class="ContenedorNombrePersona">
+            <a class="ContenedorNombrePersona" href="./muroPersonal.html">
                 <img src="img/Foto de perfil de EJEMPLO.jpg" alt="Foto de perfil" width="15%" height="80%" class="FotoPerfil CapaSuperior">
                 <h3 class="NombrePersona CapaInferior">David Alejandro Guerrero Amador</h3>
-            </div>
+            </a>
         </div>
     </header>
     <dir class="ContenedorPrincipalFondoBlanco">
-        <div class="ContenedorSecundarioFondoGris">
-            <div class="ContenedorAmigos">
-                <div class="ContenedorAmigos">
-                    <img src="img/Amigo 1 EJEMPLO.jpg" alt="Foto de perfil de un amigo" class="ImagenPerfilAmigo">
-                    <h3 class="Fuente" style="margin-left: 3%;">Pepito Perez Soler</h3>
-                </div>
-                <div>
-                    <button class="Fuente BotonesAgregarAmigos">Agregar a amigos</button>
-                </div>
-            </div>
-            <div class="ContenedorAmigos">
-                <div class="ContenedorAmigos">
-                    <img src="img/Amigo 1 EJEMPLO.jpg" alt="Foto de perfil de un amigo" class="ImagenPerfilAmigo">
-                    <h3 class="Fuente" style="margin-left: 3%;">Pepito Perez Soler</h3>
-                </div>
-                <div>
-                    <button class="Fuente BotonesAgregarAmigos">Chatear</button>
-                </div>
-            </div>
-            <div class="ContenedorAmigos">
-                <div class="ContenedorAmigos">
-                    <img src="img/Amigo 1 EJEMPLO.jpg" alt="Foto de perfil de un amigo" class="ImagenPerfilAmigo">
-                    <h3 class="Fuente" style="margin-left: 3%;">Pepito Perez Soler Solorsano</h3>
-                </div>
-                <div>
-                    <button class="Fuente BotonesAgregarAmigos">Agregar a amigos</button>
-                </div>
-            </div>
-        </div>
+        <div class="ContenedorSecundarioFondoGris" id="contenedor_amigos"></div>
     </dir>
+    <script type="module" src="./js/amigos.js"></script>
 </body>
 </html>

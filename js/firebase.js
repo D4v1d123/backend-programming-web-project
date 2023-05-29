@@ -1,18 +1,18 @@
 
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
-import { getFirestore, collection, addDoc, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js";
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js';
+import { getFirestore, collection, addDoc, getDocs, query, orderBy, where } from 'https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCZKim8X7Y_ld8jKaqMrFnDHF350OsKl5g",
-    authDomain: "unisocial-db.firebaseapp.com",
-    projectId: "unisocial-db",
-    storageBucket: "unisocial-db.appspot.com",
-    messagingSenderId: "653653409564",
-    appId: "1:653653409564:web:0b21ccf9a1de2b682904d9"
+    apiKey: 'AIzaSyCZKim8X7Y_ld8jKaqMrFnDHF350OsKl5g',
+    authDomain: 'unisocial-db.firebaseapp.com',
+    projectId: 'unisocial-db',
+    storageBucket: 'unisocial-db.appspot.com',
+    messagingSenderId: '653653409564',
+    appId: '1:653653409564:web:0b21ccf9a1de2b682904d9'
 };
 
 // Initialize Firebase
@@ -24,17 +24,33 @@ const db_conexion = getFirestore();
 export const crearPublicacion = (comentario, nombre_archivo, nombre_persona, url_archivo, tipo_archivo, fechaPublicacion) => {
     addDoc(collection(db_conexion, 'publicacion'), {comentario, nombre_archivo, nombre_persona, url_archivo, tipo_archivo, fechaPublicacion})
     .then((doc_Resultado) => {
-        window.location.href = "../muroPersonal.html";
+        window.location.href = '../muroPersonal.html';
 
     })
     .catch((error) => {
-        alert("Error al crear la publicación: ", error);
-        window.location.href = "../muroPersonal.html";
+        alert('Error al crear la publicación: ', error);
+        window.location.href = '../muroPersonal.html';
 
     });
     
     
 };
 
-export const listarPublicaciones = () => getDocs(query(collection(db_conexion, 'publicacion'), orderBy('fechaPublicacion', 'asc')));
+export const listarPublicaciones = () => getDocs(query(collection(db_conexion, 'publicacion'), orderBy('fechaPublicacion', 'asc')))
 
+//Listar tanto amigos como personas desconocidas con respecto a la consulta del usuario en el input 'nombre_amigo'
+export const buscarAmigos = (name_friend) => getDocs(query(collection(db_conexion, 'users'), where('name_user', '==', name_friend)))
+export const determineFriendOrNot = (user, id_friend) => getDocs(query(collection(db_conexion, 'friends'), where('id_person', '==', user), where('id_friend', '==', id_friend)))
+//
+
+//Listar amigos conocidos
+export const getFriendId = (user) => getDocs(query(collection(db_conexion, 'friends'), where('id_person', '==', user)))
+export const listFriends = (id_friends) => getDocs(query(collection(db_conexion, 'users'), where('id', '==', id_friends)))
+//
+
+//Agregar amigos
+export const addFriend = (user, id_friend) => addDoc(collection(db_conexion, 'friends'), {
+    id_person: user,
+    id_friend: id_friend
+})
+//
